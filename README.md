@@ -55,3 +55,8 @@ Updates Based on Feedback
 Updates Implemented
 Enhanced Error Handling: Error messages have been improved to provide clearer guidance during runtime, ensuring better user experience.
 Refactored Input Validation: Input validation logic has been refactored into reusable helper methods across relevant parts of the application, enhancing code maintainability and reducing duplication.
+Microsoft, 2021. Generic Collections in .NET. [online] Available at: https://learn.microsoft.com/en-us/dotnet/standard/generics/collections [Accessed 30 May 2024].
+
+Rajesh, V. S. (2024, February 29). Exception Handling in C#. C# Corner. Available At: https://www.c-sharpcorner.com/article/exception-handling-in-C-Sharp/ Accessed [(April 13, 2024)].
+
+Ryan, E. (2010, May 7). Units of Measurement Conversion Logic in C#. Stack Overflow. Available at: https://stackoverflow.com/questions/2791724/units-of-measurement-conversion-logic
