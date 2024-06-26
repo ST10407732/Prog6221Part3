@@ -1,0 +1,28 @@
+﻿<Window x:Class="RecipeAppWPF_PoePart3.DisplayRecipeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecipeAppWPF_PoePart3"
+        mc:Ignorable="d"
+        Title="DisplayRecipeWindow" Height="450" Width="800">
+    <Grid Background="LightGray">
+        <TextBlock Text="Display Recipe" 
+           HorizontalAlignment="Center" 
+           VerticalAlignment="Top" 
+           FontSize="19" 
+           Margin="0,10,0,0" />
+        
+        <StackPanel Margin="20">
+            <TextBlock Text="Enter Recipe Name:" FontWeight="Bold" Margin="0 0 0 10"/>
+            <TextBox x:Name="RecipeNameTextBox" Margin="0 0 0 10" Width="200"/>
+            <Button Content="Display Recipe" Click="DisplayRecipeButton_Click" Margin="0 0 0 10" HorizontalAlignment="Left"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="300" Margin="0 10">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <TextBlock x:Name="RecipeDetailsTextBlock" Margin="10"/>
+                </ScrollViewer>
+            </Border>
+            <Button Content="Back to Menu" Click="BackToMenuButton_Click" HorizontalAlignment="Left"/>
+        </StackPanel>
+    </Grid>
+</Window>
