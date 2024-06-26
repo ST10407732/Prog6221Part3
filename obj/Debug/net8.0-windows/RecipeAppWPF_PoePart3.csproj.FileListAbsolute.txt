@@ -28,3 +28,4 @@ C:\Users\lab_services_student\source\repos\RecipeAppWPF_PoePart3\obj\Debug\net8.
 C:\Users\lab_services_student\source\repos\RecipeAppWPF_PoePart3\obj\Debug\net8.0-windows\DisplayRecipeWindow.baml
 C:\Users\lab_services_student\source\repos\RecipeAppWPF_PoePart3\obj\Debug\net8.0-windows\ResetQuantitiesWindow.baml
 C:\Users\lab_services_student\source\repos\RecipeAppWPF_PoePart3\obj\Debug\net8.0-windows\ScaleRecipeWindow.baml
+C:\Users\lab_services_student\source\repos\RecipeAppWPF_PoePart3\obj\Debug\net8.0-windows\RecipeAppWPF_PoePart3.sourcelink.json
