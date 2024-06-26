@@ -50,6 +50,8 @@ Validates input for recipe names, ingredient quantities, and scaling factors.
 Displays error messages for invalid inputs.
 Exiting the Application
 Users can exit the application through the interface.
+
 Updates Based on Feedback
-Improved README: Enhanced clarity with project name, detailed installation, usage instructions, class structure explanation, and error handling.
-Detailed Scaling Functionality: Clarified how scaling factors affect ingredient quantities and calories.
+Updates Implemented
+Enhanced Error Handling: Error messages have been improved to provide clearer guidance during runtime, ensuring better user experience.
+Refactored Input Validation: Input validation logic has been refactored into reusable helper methods across relevant parts of the application, enhancing code maintainability and reducing duplication.
