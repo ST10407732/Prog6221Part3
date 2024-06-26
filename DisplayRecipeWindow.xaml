@@ -5,19 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RecipeAppWPF_PoePart3"
         mc:Ignorable="d"
-        Title="DisplayRecipeWindow" Height="450" Width="800">
+        Title="Display Recipe" Height="450" Width="800">
     <Grid Background="LightGray">
         <TextBlock Text="Display Recipe" 
-           HorizontalAlignment="Center" 
-           VerticalAlignment="Top" 
-           FontSize="19" 
-           Margin="0,10,0,0" />
-        
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Top" 
+                   FontSize="19" 
+                   Margin="0,10,0,0" />
+
         <StackPanel Margin="20">
-            <TextBlock Text="Enter Recipe Name:" FontWeight="Bold" Margin="0 0 0 10"/>
-            <TextBox x:Name="RecipeNameTextBox" Margin="0 0 0 10" Width="200"/>
+            <TextBlock Text="Select a Recipe:" FontWeight="Bold" Margin="0 0 0 10"/>
+            <ListBox x:Name="RecipeListBox" DisplayMemberPath="RecipeName" Height="150" Margin="0 0 0 10"/>
             <Button Content="Display Recipe" Click="DisplayRecipeButton_Click" Margin="0 0 0 10" HorizontalAlignment="Left"/>
-            <Border BorderBrush="Black" BorderThickness="1" Height="300" Margin="0 10">
+            <Border BorderBrush="Black" BorderThickness="1" Height="150" Margin="0 10">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <TextBlock x:Name="RecipeDetailsTextBlock" Margin="10"/>
                 </ScrollViewer>

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Media;
@@ -10,32 +11,27 @@ namespace RecipeAppWPF_PoePart3
     /// </summary>
     public partial class DisplayRecipeWindow : Window
     {
-      
         private List<Recipe> recipes;
 
         public DisplayRecipeWindow(List<Recipe> recipes)
         {
             InitializeComponent();
             this.recipes = recipes;
+
+            // Populate the ListBox with recipe names
+            RecipeListBox.ItemsSource = recipes.OrderBy(r => r.RecipeName);
         }
 
         private void DisplayRecipeButton_Click(object sender, RoutedEventArgs e)
         {
-            string recipeName = RecipeNameTextBox.Text.Trim();
-            if (string.IsNullOrWhiteSpace(recipeName))
+            Recipe selectedRecipe = RecipeListBox.SelectedItem as Recipe;
+            if (selectedRecipe == null)
             {
-                MessageBox.Show("Please enter a recipe name.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Please select a recipe from the list.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            Recipe recipe = recipes.FirstOrDefault(r => r.RecipeName.Equals(recipeName, StringComparison.OrdinalIgnoreCase));
-            if (recipe == null)
-            {
-                MessageBox.Show($"Recipe '{recipeName}' not found.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            DisplayRecipe(recipe);
+            DisplayRecipe(selectedRecipe);
         }
 
         private void DisplayRecipe(Recipe recipe)
