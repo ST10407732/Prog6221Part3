@@ -1,22 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace RecipeAppWPF_PoePart3
 {
-    /// <summary>
-    /// Interaction logic for DisplayAllRecipesWindow.xaml
-    /// </summary>
     public partial class DisplayAllRecipesWindow : Window
     {
         private List<Recipe> recipes;
@@ -24,7 +14,7 @@ namespace RecipeAppWPF_PoePart3
         public DisplayAllRecipesWindow(List<Recipe> recipes)
         {
             InitializeComponent();
-            this.recipes = recipes;
+            this.recipes = recipes.OrderBy(r => r.RecipeName).ToList(); // Sort recipes by RecipeName
             DisplayRecipes();
         }
 
@@ -109,7 +99,6 @@ namespace RecipeAppWPF_PoePart3
                 RecipesStackPanel.Children.Add(recipeBorder);
             }
         }
-
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
